@@ -212,4 +212,9 @@ $('.filters-block_find-button').on('click', e => {
     window.location = './?' + getQuery;
 });
 
+$(window).on('keyup', e => {
+    if (e.key == 'Enter')
+        $('.filters-block_find-button').trigger('click');
+});
+
 renderGetQuery();
