@@ -126,7 +126,7 @@ function generateGetQuery() {
         getObject[name] = valueOption.getAttribute('value');
     });
     $('.double-range').each((i, el) => {
-        if (!window.isSearchChange) return;
+        if (window.isSearchChange) return;
         const name = el.getAttribute('name');
         getObject[name + '-from'] = el.fieldFrom.val();
         getObject[name + '-to'] = el.fieldTo.val();
