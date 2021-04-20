@@ -254,6 +254,9 @@ $('.double-range').each(function () { //Для каждой полосы дел�
             return value; //теперь мы получили value и вернём его
          };
 
+         this.fieldFrom.val(this.min);
+         this.fieldTo.val(this.max);
+
          //во время инициализации синхронизируем значения атрибутов и внутренних свойств джеса
          this.thumb1.value = +this.thumb1.attr('data-value');
          this.thumb2.value = +this.thumb2.attr('data-value');

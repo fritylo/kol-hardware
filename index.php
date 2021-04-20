@@ -28,14 +28,16 @@
                 <div class="right abs"></div>
                 <div class="left abs"></div>
             </div>
-            <div class="filters-block_title">ФИЛЬТРЫ</div>
+            <div class="filters-block_title">Finder</div>
             <?php
             text_field('search', 'Что искать?..');
 
             subtitle('Магазин');
-            checkbox('shop-dns', 'ДНС');
+            checkbox('shop-optima', 'Optima-Computers');
             checkbox('shop-indicator', 'Индикатор');
             checkbox('shop-komtek', 'КомТек');
+            checkbox('shop-patron', 'Патрон-Сервис');
+            checkbox('shop-fotosklad', 'Фотосклад');
 
             subtitle('В наличии');
             radio_group('in-stock', [
@@ -45,7 +47,7 @@
             ], 2);
 
             subtitle('Цена');
-            double_range('price', 0, 10000, 100, 'руб');
+            double_range('price', 10000, 100000, 1000, 'руб');
 
             subtitle('Сортировка');
             dropdown('order-param', [
