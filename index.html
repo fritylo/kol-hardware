@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Finder</title>
+    <link rel="stylesheet" href="https://forum.qcoder.ru/index.css" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(75625105, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/75625105" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body>
+    <div class="page-wrapper row rel">
+        <div class="filters-block col">
+            <div class="toggle-button abs clickbl">
+                <div></div>
+            </div>
+            <div class="close-button abs clickbl">
+                <div class="right abs"></div>
+                <div class="left abs"></div>
+            </div>
+            <div class="filters-block_title"><a class="filters-block_title" href="http://finder.qcoder.ru/">Finder</a></div>
+            <div class="text-field" name="search">
+   <input type="text" placeholder="Что искать?.." />
+</div>
+   <div class="filters-block_subtitle">Магазин</div>
+   <label class="checkbox" name="shop-optima">Optima-Computers<input type="checkbox" checked />
+      <span class="checkmark"></span>
+   </label>
+   <label class="checkbox" name="shop-indicator">Индикатор<input type="checkbox" checked="checked" />
+      <span class="checkmark"></span>
+   </label>
+   <label class="checkbox" name="shop-komtek">КомТек<input type="checkbox" checked="checked" />
+      <span class="checkmark"></span>
+   </label>
+   <label class="checkbox" name="shop-patron">Патрон-Сервис<input type="checkbox" checked="checked" />
+      <span class="checkmark"></span>
+   </label>
+   <label class="checkbox" name="shop-foto">Фотосклад<input type="checkbox" checked="checked" />
+      <span class="checkmark"></span>
+   </label>
+   <div class="filters-block_subtitle">В наличии</div>
+
+   <div class="radio-button-group col" name="in-stock">
+                     <div class="radio-button">
+            <label class="container">В наличии               <input type="radio"
+                  value="in-stock"
+                  name="in-stock"
+                   />
+               <span class="checkmark"></span>
+            </label>
+         </div>
+                        <div class="radio-button">
+            <label class="container">Без разницы               <input type="radio"
+                  value="any"
+                  name="in-stock"
+                  checked />
+               <span class="checkmark"></span>
+            </label>
+         </div>
+                  </div>
+
+   <div class="filters-block_subtitle">Цена</div>
+<div>
+   <div class="double-range" name="price" data-min="100" data-max="100000" data-step="1000">
+      <div class="text-fields row">
+         <div class="field field_from row">
+            <span>от</span>
+            <!-- И сюда -->
+            <input class="text-field text-field_short" value="0" id="fieldQuadFrom" />
+            <span>руб</span>
+         </div>
+         <div class="field field_to row">
+            <span>до</span>
+            <!-- И сюда -->
+            <input class="text-field text-field_short" value="100000" id="fieldQuadTo" />
+            <span>руб</span>
+         </div>
+      </div>
+      <div class="line"></div>
+      <!-- Вставляем минимальное значение в вёрстку. -->
+      <!-- Чтобы понять как работает шкала, смотри устройство PUG файлов и файл index.js. -->
+      <!-- Суть в том, что джес скрип всё подтянет сам если мы положим это значение сюда -->
+      <!-- Так что мы положим -->
+      <div class="thumb thumb1 abs clickbl" data-value="0">
+         <div class="position"></div>
+      </div>
+      <!-- Ещё положим максимальную квадратуру -->
+      <div class="thumb thumb2 abs clickbl" data-value="100000">
+         <div class="position"></div>
+      </div>
+   </div>
+</div>
+   <div class="filters-block_subtitle">Сортировка</div>
+
+   <select class="dropdown" name="order-param">
+               <!-- Этот хтмл будет выведен несколько раз -->
+         <option value="price">По цене</option> <!-- Создаём option и вставляем в него название города -->
+               <!-- Этот хтмл будет выведен несколько раз -->
+         <!--option value="add-date">По дате добавления</option--> <!-- Создаём option и вставляем в него название города -->
+         </select>
+
+
+   <select class="dropdown" name="order-direction">
+               <!-- Этот хтмл будет выведен несколько раз -->
+         <option value="asc">По возрастанию</option> <!-- Создаём option и вставляем в него название города -->
+               <!-- Этот хтмл будет выведен несколько раз -->
+         <option value="desc">По убыванию</option> <!-- Создаём option и вставляем в него название города -->
+         </select>
+
+            <button class="filters-block_find-button">НАЙТИ</button>
+            Нашли баг? Есть вопросы или предложения? Обращайтесь: <a href="https://t.me/problemati4nyi" target="_blank" style="color: white"> Telegram </a> <a href="https://docs.google.com/spreadsheets/d/1eNNGL4Bc22je_9pjgXrQt0JTNyNUvf8ILrvOyr6RwnA/edit#gid=0" target="_blank" style="color: white"> ChangeList </a>
+        </div>
+        <div class="products">
+            Для того чтобы воспользоваться поиском введите в строку поисковой запрос и нажмите "Найти"
+        </div>
+    </div>
+</body>
+
+<!-- Тут подключаем библиотеку jQuery для JavaScript, которая облегчает манипуляции со страницей -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script src="https://forum.qcoder.ru/js/mobile-filters-toggle.js?v1.00"></script>
+<script src="https://forum.qcoder.ru/js/double-range.js?v1.00"></script>
+<!-- Ну и наш скрипт, который управляет страницей -->
+<script src="https://forum.qcoder.ru/index.js?v1.00"></script>
+
+</html>

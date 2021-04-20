@@ -126,6 +126,7 @@ function generateGetQuery() {
         getObject[name] = valueOption.getAttribute('value');
     });
     $('.double-range').each((i, el) => {
+        if (!window.isSearchChange) return;
         const name = el.getAttribute('name');
         getObject[name + '-from'] = el.fieldFrom.val();
         getObject[name + '-to'] = el.fieldTo.val();
@@ -199,6 +200,10 @@ function renderGetQuery() {
         }
     }
 }
+
+$('.text-field[name="search"]').on('change', e => {
+    window.isSearchChange = true;
+});
 
 $('.filters-block_find-button').on('click', e => {
     const getQuery = generateGetQuery();
