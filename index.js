@@ -186,6 +186,8 @@ function renderGetQuery() {
         }
         else if (type == 'double-range') {
             const to = getQuery.get(name+'-to'), from = getQuery.get(name+'-from');
+            
+            if (!to || !from) return; 
             const dr = $(`.double-range[name="${name}"]`)[0];
 
             dr.thumb1.setValue(from);
