@@ -172,7 +172,8 @@ function renderGetQuery() {
     
     for (const [name, type] of Object.entries(getObject)) {
         if (type == 'checkbox') {
-            $(`.checkbox[name="${name}"] input`)[0].checked = getQuery.has(name);
+            if (location.search)
+                $(`.checkbox[name="${name}"] input`)[0].checked = getQuery.has(name);
         }
         else if (type == 'radio-button-group') {
             const value = getQuery.get(name);
