@@ -201,7 +201,7 @@ function renderGetQuery() {
     }
 }
 
-$('.text-field[name="search"]').on('change', e => {
+$('.text-field[name="search"] input').on('change', e => {
     window.isSearchChange = true;
 });
 
